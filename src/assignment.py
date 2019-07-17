@@ -80,7 +80,8 @@ if __name__ == '__main__':
 
     w, h = model_wh(args.resolution)
     e = TfPoseEstimator(get_graph_path(args.model), target_size=(w, h))
-    camera = cv2.VideoCapture(args.camera)
+    camera = cv2.VideoCapture(1)
+    # camera = cv2.VideoCapture(args.camera)
     ret_val, image = camera.read()
     
     print("**** CTRL+C to exit ****")
